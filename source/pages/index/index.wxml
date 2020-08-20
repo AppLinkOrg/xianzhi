@@ -1,0 +1,31 @@
+<!--index.wxml-->
+
+
+<view   class='bg '  style='background-image:url({{uploadpath}}resource/{{res.background}});background-size:100% 100%'>
+<view class="container">
+ 
+  <swiper class="" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+  <block wx:for="{{indexbanner}}" wx:key="index">
+    <swiper-item>
+     <image src='{{uploadpath}}indexbanner/{{item.img}}' bindtap='viewPhoto'  id='{{uploadpath}}indexbanner/{{item.img}}' style='width:750rpx;height:350rpx;'></image>
+    </swiper-item>   
+  </block>  
+</swiper>
+
+<view class='flex-row flex-center'>
+
+<view class='flex-row flex-column flex-1'>
+  <view class='ai'>女宝宝</view>
+  <image src='{{uploadpath}}resource/{{res.girlbaby}}' class='row' data-id='nv'></image>
+  <view class='baby text-center' bindtap='onAon' data-id='nv' style='background-color:#e599d9'>请选择</view>
+   </view>
+
+ <view class='flex-row flex-column flex-1'>
+ <view class='bi'>男宝宝</view>
+  <image src='{{uploadpath}}resource/{{res.boybaby}}' class='row' data-id='nan'></image>
+  <view class='baby text-center' bindtap='onAon' data-id='nan' style='background-color:#5caef1'>请选择</view>
+   </view>
+ </view>
+ 
+</view>
+</view>
